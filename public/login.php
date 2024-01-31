@@ -47,19 +47,20 @@ require_once __DIR__ . '/../src/init.php';
                                     <span onclick="register()">S'inscrire</span>
                                     <hr id="Indicator">
                                 </div>
-                                <form id="LoginForm">
-                                    <input type="text" placeholder="Username">
-                                    <input type="password" placeholder="Password">
+                                <form id="LoginForm" action="actions/login.php" method="post">
+                                    <input type="text" name="username" placeholder="Username">
+                                    <input type="password" name="pswrd" placeholder="Password">
                                     <button type="submit" class="btn">Connexion</button>
                                     <a href="">Mot de passe oublié ?</a>
                                 </form>
-                                <form id="RegForm">
-                                    <input type="text" placeholder="Username">
-                                    <input type="email" placeholder="Email">
-                                    <input type="password" placeholder="Password">
+                                <form id="RegForm" action="actions/register.php" method="post">
+                                    <input type="text" name="username" placeholder="Username">
+                                    <input type="email" name="email" placeholder="Email">
+                                    <input type="password" name="pswrd" placeholder="Password">
                                     <button type="submit" class="btn">S'inscrire</button>
 
                                 </form>
+                                <?php require_once __DIR__ . '/../src/partials/show_error.php'; ?>
                             </div>
                         </div>
                     </div>

@@ -1,18 +1,19 @@
-<?php 
+<?php
+require_once __DIR__ . "/../../src/init.php";
 
-session_start();
-session_unset();
-session_destroy();
-session_abort();
-$ok = 0;
-if (isset($_POST['rememberme']) && $_POST['rememberme'] === 'yes') {
-    $ok = session_set_cookie_params(1000000);
+if (empty($_POST['username'])) {
+    $_SESSION['error_message'] = 'Veuillez entrer votre nom d\'utilisateur.';
+    header('Location: /login.php');
+    die();
 }
 
-// require ici
+if (empty($_POST['pswrd'])) {
+    $_SESSION['error_message'] = 'Veuillez entrer votre mot de passe.';
+    header('Location: /login.php');
+    die();
+}
 
-session_start();
-
-var_dump($_POST, $ok);
-
-// traitement classique
+if (isset($_POST['username']) && isset($_POST['pswrd'])) {
+    $username = htmlspecialchars($_POST['username']);
+    $pswrd = hash('sha256', $_POST['pswrd']);
+}
