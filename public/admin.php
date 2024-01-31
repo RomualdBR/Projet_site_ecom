@@ -22,7 +22,7 @@ require_once __DIR__ . '/../src/init.php'; ?>
         </div>
         <div>
             <label for="image"></label>
-            <input type="file" name="product_image" id="product_image" placeholder="https://example.com" pattern="https://.*" size="30" required>
+            <input type="file" name="product_image" id="product_image" placeholder="https://example.com" pattern="https://.*" size="30">
         </div>
         <div>
             <label for="description"></label>
@@ -42,14 +42,32 @@ require_once __DIR__ . '/../src/init.php'; ?>
 
         <?php
 
+            
+
             if (isset($_POST['submit']) && $_POST['submit'] == 'press'){
+                if(empty($_POST['product_name'])){
+                    echo'il manque le nom';
+                    die();
+                }
+                if(empty($_POST['product_image'])){
+                    echo'il manque l'.' image';
+                    die();
+                }
+                if(empty($_POST['product_description'])){
+                    echo'il manque la description';
+                    die();
+                }
+                if(empty($_POST['product_genre'])){
+                    echo'il manque le Type';
+                    die();
+                }
+                if(empty($_POST['product_number'])){
+                    echo'il manque le nombre';
+                    die();
+                }
                 //Toutes les informations sont remplies
                 if (isset($_POST['product_name']) && isset($_POST['product_image']) && isset($_POST['product_description']) && isset($_POST['product_genre']) && isset($_POST['product_number'])) {
                     echo 'Votre produit est enregistrer dans la BDD';
-                }
-                else{
-                    // Si les infos suivantes ne sont pas remplies par l'admin, cela marque une erreur.
-                    echo 'Veuillez rentrer les infos de votre produit';
                 }
             }
         ?>
