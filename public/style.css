@@ -190,5 +190,15 @@ form a {
     transition: transform 1s;
 }
 
+/* CSS Page de produit */
+
+.form-containerProduct form {
+    max-width: 400px;
+    padding: 0 20px;
+    position: absolute;
+    top:130px;
+    transition: transform 1s; 
+
+}
 
 

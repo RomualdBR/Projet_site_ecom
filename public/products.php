@@ -1,6 +1,8 @@
 <?php
 require_once __DIR__ . '/../src/init.php';
 ?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -23,11 +25,18 @@ require_once __DIR__ . '/../src/init.php';
                         <li><a href="home.php">Accueil</li></a>
                         <li><a href="products.php">Produits</li></a>
                         <li><a href="">À propos</li></a>
-                        <li><a href="">Contact</li></a>
+                        <li><a href="admin.php">Admin</li></a>
                         <li><a href="login.php">Connexion</li></a>
                     </ul>
                     <img src="assets/bootstrap-5.3.2-dist/img/shopping-bag.png" width="30px" height="30px">
                 </nav>
+            </div>
+
+            <!-- Account page -->
+
+            <button type="buton" class="btn"><a href="admin.php">
+                    Ajoutez vos produits
+            </button></a>
 
 
 
