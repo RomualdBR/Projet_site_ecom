@@ -1,4 +1,3 @@
-
 <?php
 require_once __DIR__ . '/../src/init.php';
 ?>
@@ -18,17 +17,17 @@ require_once __DIR__ . '/../src/init.php';
         <div class="containerNavigation">
             <div class="navbar">
                 <div class="logo">
-                    <img src="asset/logo.png" width="100px" alt="logo">
+                    <img src="assets/bootstrap-5.3.2-dist/img/logo.png" width="100px" alt="logo">
                 </div>
                 <nav>
                     <ul>
-                        <li><a href=""></a>Accueil</li>
-                        <li><a href=""></a>Produits</li>
-                        <li><a href=""></a>À propos</li>
-                        <li><a href=""></a>Contact</li>
-                        <li><a href="products.html"></a>Connexion</li>
+                        <li><a href="home.php">Accueil</li></a>
+                        <li><a href="products.php">Produits</li></a>
+                        <li><a href="">À propos</li></a>
+                        <li><a href="">Contact</li></a>
+                        <li><a href="login.php">Connexion</li></a>
                     </ul>
-                    <img src="asset/shopping-bag.png" width="30px" height="30px">
+                    <img src="assets/bootstrap-5.3.2-dist/img/shopping-bag.png" width="30px" height="30px">
                 </nav>
             </div>
             <div class="row">
@@ -39,7 +38,7 @@ require_once __DIR__ . '/../src/init.php';
                     <a href="" class="btn">Explorer maintenant</a>
                 </div>
                 <div class="-col2">
-                    <img src="asset/panneau-accueil.png" "  alt=" panneau">
+                    <img src="assets/bootstrap-5.3.2-dist/img/panneau-accueil.png" "  alt=" panneau">
                 </div>
 
             </div>
@@ -51,7 +50,7 @@ require_once __DIR__ . '/../src/init.php';
         <h2 class="title">Produits principaux </h2>
         <div class="row">
             <div class="col-4">
-                <img src="asset/girophare-1.png">
+                <img src="assets/bootstrap-5.3.2-dist/img/girophare-1.png">
                 <h4>Girophare qualité master Nike</h4>
                 <div class="rating">
                     <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
@@ -60,7 +59,7 @@ require_once __DIR__ . '/../src/init.php';
                 <p>49.99 €</p>
             </div>
             <div class="col-4">
-                <img src="asset/panneau-1.png">
+                <img src="assets/bootstrap-5.3.2-dist/img/panneau-1.png">
                 <h4>Panneau rare limité Quechua</h4>
                 <div class="rating">
                     <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
@@ -68,7 +67,7 @@ require_once __DIR__ . '/../src/init.php';
                 <p>629.99 €</p>
             </div>
             <div class="col-4">
-                <img src="asset/porte-cle-1.png">
+                <img src="assets/bootstrap-5.3.2-dist/img/porte-cle-1.png">
                 <h4>Porte clé solide Gucci edition</h4>
                 <div class="rating">
                     <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>

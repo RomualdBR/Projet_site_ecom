@@ -1,8 +1,6 @@
 <?php
 require_once __DIR__ . '/../src/init.php';
-?><
-
-
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -18,19 +16,19 @@ require_once __DIR__ . '/../src/init.php';
         <div class="containerNavigation">
             <div class="navbar">
                 <div class="logo">
-                    <img src="asset/logo.png" width="100px" alt="logo">
+                    <img src="assets/bootstrap-5.3.2-dist/img/logo.png" width="100px" alt="logo">
                 </div>
                 <nav>
                     <ul>
-                        <li><a href=""></a>Accueil</li>
-                        <li><a href=""></a>Produits</li>
-                        <li><a href=""></a>À propos</li>
-                        <li><a href=""></a>Contact</li>
-                        <li><a href=""></a>Connexion</li>
+                        <li><a href="home.php">Accueil</li></a>
+                        <li><a href="products.php">Produits</li></a>
+                        <li><a href="">À propos</li></a>
+                        <li><a href="">Contact</li></a>
+                        <li><a href="login.php">Connexion</li></a>
                     </ul>
-                    <img src="asset/shopping-bag.png" width="30px" height="30px">
+                    <img src="assets/bootstrap-5.3.2-dist/img/shopping-bag.png" width="30px" height="30px">
                 </nav>
-          
+
 
 
 </body>
