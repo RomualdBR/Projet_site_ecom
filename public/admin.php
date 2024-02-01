@@ -1,6 +1,7 @@
 <?php require_once __DIR__ . '/../public/admin.php';
 require_once __DIR__ . '/../src/init.php'; 
-require_once __DIR__ . '/../src/db.php'
+require_once __DIR__ . '/../src/db.php';
+require_once __DIR__ . '/../public/actions/remove.php'
 ?>
 
 <!DOCTYPE html>
@@ -131,7 +132,7 @@ require_once __DIR__ . '/../src/db.php'
     }
 
 ?>
-<br><br><br>
+
 <form action="" method="post">
     <div>
         <label for="name"></label>
