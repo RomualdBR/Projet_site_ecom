@@ -1,7 +1,15 @@
 <?php
-require_once __DIR__ . '/../src/init.php';
-?>
+include_once __DIR__ . '/../src/init.php';
 
+function getProduct(): array
+{
+    global $pdo;
+    $st1 = $pdo->prepare('SELECT * FROM products');
+    $st1->execute();
+    $products = $st1->fetchAll();
+    return $products;
+};
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -49,38 +57,38 @@ require_once __DIR__ . '/../src/init.php';
     <div class="small-container">
         <h2 class="title">Produits principaux </h2>
         <div class="row">
-            <div class="col-4">
-                <img src="assets/bootstrap-5.3.2-dist/img/girophare-1.png">
-                <h4>Girophare qualité master Nike</h4>
-                <div class="rating">
-                    <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            <?php
+            foreach (getProduct() as $product) :
+            ?>
+                <div class="col-4">
+                    <img src="assets/bootstrap-5.3.2-dist/img/girophare-1.png">
+                    <h4><?= $product->pname ?></h4>
+                    <div class="rating">
+                        <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
 
+                    </div>
+                    <p><?= $product->price ?>€</p>
                 </div>
-                <p>49.99 €</p>
-            </div>
-            <div class="col-4">
-                <img src="assets/bootstrap-5.3.2-dist/img/panneau-1.png">
-                <h4>Panneau rare limité Quechua</h4>
-                <div class="rating">
-                    <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                <div class="col-4">
+                    <img src="assets/bootstrap-5.3.2-dist/img/panneau-1.png">
+                    <h4>Panneau rare limité Quechua</h4>
+                    <div class="rating">
+                        <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                    </div>
+                    <p><?php ?>629.99 €</p>
                 </div>
-                <p>629.99 €</p>
-            </div>
-            <div class="col-4">
-                <img src="assets/bootstrap-5.3.2-dist/img/porte-cle-1.png">
-                <h4>Porte clé solide Gucci edition</h4>
-                <div class="rating">
-                    <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                <div class="col-4">
+                    <img src="assets/bootstrap-5.3.2-dist/img/porte-cle-1.png">
+                    <h4>Porte clé solide Gucci edition</h4>
+                    <div class="rating">
+                        <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                    </div>
+                    <p>9.99 €</p>
                 </div>
-                <p>9.99 €</p>
-            </div>
+            <?php endforeach; ?>
         </div>
 
     </div>
-
-
-
-
 </body>
 
 </html>
