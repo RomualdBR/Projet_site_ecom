@@ -96,6 +96,7 @@ require_once __DIR__ . '/../src/db.php'
                         ':quantity' => $quantity,
                         ':genre' => $genre,
                         ]);
+                        header('Location: /admin.php');
                     }
                     
                 }
@@ -120,15 +121,46 @@ require_once __DIR__ . '/../src/db.php'
             echo "<td>" . $row["description"] . "</td>";
             echo "<td>" . $row["genre"] . "</td>";
             echo "<td>" . $row["quantity"] . "</td>";
-            echo "<td><a href='id=" . $row["id"] . "'>Modifier</a> | <a href='id=" . $row["id"] . "'>Supprimer</a></td>";
+            echo "<td><form action='actions/remove.php?id=". $row['id'] ."' method='post'> <input type='button' name='alter_table' value='Modifier' id=" . $row["id"] . "></input> | <input type='submit' name='delete_table' value='Supprimer' id=" . $row["id"] . "></input></form></td>";
             echo "</tr>";
-        }
+        
+    }
         echo "</table>";
     } else {
         echo "Aucun résultat trouvé.";
     }
 
 ?>
+<br><br><br>
+<form action="" method="post">
+    <div>
+        <label for="name"></label>
+        <input type="text" name="name" id="product_name" placeholder="Name">
+    </div>
+    <div>
+        <label for="price"></label>
+        <input type="text" name="price" id="product_price" placeholder="Prix">
+    </div>
+    <div>
+        <label for="image"></label>
+        <input type="file" name="image" id="product_image" placeholder="https://example.com" pattern="https://.*" size="30">
+    </div>
+    <div>
+        <label for="description"></label>
+        <textarea class="description_product" type="text" name="description" id="product_description" placeholder="Description"></textarea>
+    </div>
+    <div>
+        <label for="genre"></label>
+        <input type="text" name="genre" id="product_genre" placeholder="Type">
+    </div>
+    <div>
+        <label for="number"></label>
+        <input type="number" name="quantity" id="product_number" placeholder="Number">
+    </div>
+    <div>
+        <button type="submit" name="submit" value="press">Envoyer</button>
+    </div>
+</form>
 
 
 </body>
