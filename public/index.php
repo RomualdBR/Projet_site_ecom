@@ -1,14 +1,5 @@
 <?php
 include_once __DIR__ . '/../src/init.php';
-
-function getProduct(): array
-{
-    global $pdo;
-    $st1 = $pdo->prepare('SELECT * FROM products');
-    $st1->execute();
-    $products = $st1->fetchAll();
-    return $products;
-};
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -57,20 +48,39 @@ function getProduct(): array
     <!--------- Cathégories ---------->
     <div class="small-container">
         <h2 class="title">Produits principaux </h2>
-        <div class="row">
-            <?php
-            foreach (getProduct() as $product) :
-            ?>
-                <div class="col-4">
-                    <img src="assets/bootstrap-5.3.2-dist/img/girophare-1.png">
-                    <h4><?= $product['pname'] ?></h4>
-                    <div class="rating">
-                        <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
 
-                    </div>
-                    <p><?= $product['price'] ?> €</p>
+
+        <div class="row">
+            <div class="col-4">
+                <img src="assets/bootstrap-5.3.2-dist/img/girophare-1.png">
+                <h4>Girophare qualité de marque</h4>
+                <div class="rating">
+                    <p>★★★★★</p>
+
                 </div>
-            <?php endforeach; ?>
+            </div>
+            <div class="col-4">
+                <img src="assets/bootstrap-5.3.2-dist/img/girophare-1.png">
+                <h4>t-shirt designé par Mathieu</h4>
+                <div class="rating">
+                    <p>★★★★★</p>
+
+                </div>
+            </div>
+            <div class="col-4">
+                <img src="assets/bootstrap-5.3.2-dist/img/panneau-1.png">
+                <h4>Panneau de signalisation de marque</h4>
+                <div class="rating">
+                    <p>★★★★★</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <img src="assets/bootstrap-5.3.2-dist/img/porte-cle-1.png">
+                <h4>Porte clé de marque</h4>
+                <div class="rating">
+                    <p>★★★★★</p>
+                </div>
+            </div>
         </div>
 
     </div>
