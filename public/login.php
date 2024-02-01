@@ -66,6 +66,7 @@ require_once __DIR__ . '/../src/init.php';
                 </div>
             </div>
 
+
             <!--JS login et register-->
             <script>
                 var LoginForm = document.getElementById("LoginForm")

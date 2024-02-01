@@ -34,10 +34,47 @@ require_once __DIR__ . '/../src/init.php';
 
             <!-- Account page -->
 
-            <button type="buton" class="btn"><a href="admin.php">
+            <button type="buton" class="button"><a href="admin.php">
                     Ajoutez vos produits
             </button></a>
-
+            <div class="row">
+            <div class="col-4">
+                <img src="assets/bootstrap-5.3.2-dist/img/girophare-1.png">
+                <h4>Girophare qualité master Nike</h4>
+                <div class="rating">
+                    <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                </div>
+                <button type="button" class="button">Add</button>
+                <p>49.99 €</p>
+            </div>
+            <div class="col-4">
+                <img src="assets/bootstrap-5.3.2-dist/img/girophare-1.png">
+                <h4>Girophare qualité master Nike</h4>
+                <div class="rating">
+                    <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                </div>
+                <button type="button" class="button">Add</button>
+                <p>49.99 €</p>
+            </div>
+            <div class="col-4">
+                <img src="assets/bootstrap-5.3.2-dist/img/panneau-1.png">
+                <h4>Panneau rare limité Quechua</h4>
+                <div class="rating">
+                    <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                </div>
+                <button type="button" class="button">Add</button>
+                <p>629.99 €</p>
+            </div>
+            <div class="col-4">
+                <img src="assets/bootstrap-5.3.2-dist/img/porte-cle-1.png">
+                <h4>Porte clé solide Gucci edition</h4>
+                <div class="rating">
+                    <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                </div>
+                <button type="button" class="button">Add</button>
+                <p>9.99 €</p>
+            </div>
+            
 
 
 </body>

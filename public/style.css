@@ -5,9 +5,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: 'Poppins';
 }
+
 .navbar {
     display: flex;
     align-items: center;
@@ -38,56 +40,105 @@ p {
     color: #555;
 }
 
-.containerNavigation{
+.containerNavigation {
     max-width: 1300px;
     margin: auto;
     padding-left: 2px;
     padding-right: 25px;
 }
-.row{
+
+.row {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
-    
+
 }
-.-col2{
+
+.-col2 {
     flex-basis: 50%;
     min-width: 300px;
-  
+
 }
-.-col2 img{
-    max-width:auto;
+
+.-col2 img {
+    max-width: auto;
     padding: 50px 0;
 }
-.-col2 h1{
+
+.-col2 h1 {
     font-size: 50px;
     line-height: 60px;
     margin: 25px 0;
 }
-.btn{
+
+.btn {
     display: inline-block;
     background-color: rgb(78, 181, 255);
-    color:#fff;
+    color: #fff;
     padding: 8px 30px;
-    margin:30px 0;
+    margin: 20px 0;
     border-radius: 30px;
-    transition:background 0.5;
-}
-.btn:hover{
-    background:rgb(48, 97, 182);
+    transition: background 0.5;
 }
 
-.header{
-    background:radial-gradient(#fff,rgb(182, 219, 255));
+.btn:hover {
+    background: rgb(48, 97, 182);
 }
-.header .row{
+
+.button {
+    background-color: #7f96d0;
+    border: 1px solid #7f96d0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Graphik, -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    line-height: 1.15;
+    overflow: visible;
+    padding: 12px 16px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: all 80ms ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+}
+
+.button:disabled {
+    opacity: .5;
+}
+
+.button:focus {
+    outline: 0;
+}
+
+.button:hover {
+    background-color: #7f96d0;
+    border-color: #0A46E4;
+}
+
+.button:active {
+    background-color: #0039D7;
+    border-color: #0039D7;
+}
+
+
+
+.header {
+    background: radial-gradient(#fff, rgb(182, 219, 255));
+}
+
+.header .row {
     margin-top: 70px;
 }
 
 /*FEATURE*/
 
-.small-container{
+.small-container {
     max-width: 1080px;
     margin: auto;
     padding-left: 25px;
@@ -95,64 +146,85 @@ p {
     margin-bottom: 100px;
 }
 
-.col-4{
+.col-4 {
     flex-basis: 25%;
     padding: 10px;
     min-width: 200px;
     margin-bottom: 50px;
     border: solid 2px;
 }
-.col-4 img{
+
+.col-4 img {
     width: 100%;
 }
-.title{
+
+.col-products {
+
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    border: solid 2px;
+}
+
+.col-4 img {
+    width: 100%;
+}
+
+
+.title {
     text-align: center;
     margin: 0 auto 80px;
-    position:relative;
+    position: relative;
     line-height: 60px;
-    color:#555;
+    color: #555;
     margin-top: 50px;
 }
 
 /*Account page*/
 
 
-.account-page{
-    padding :50px;
+.account-page {
+    padding: 50px;
 
 }
-.form-container{
+
+.form-container {
     background: white;
     width: 300px;
     height: 400px;
     position: relative;
-    text-align:center;
+    text-align: center;
     padding: 20px;
     margin: auto;
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0);
     overflow: hidden;
 }
-.form-container span{
+
+.form-container span {
     font-weight: bold;
     padding: 0 10px;
-    color:#555;
+    color: #555;
     cursor: pointer;
     width: 100px;
     display: inline-block;
 }
-.form-btn{
+
+.form-btn {
     display: inline-block;
 
 }
+
 .form-container form {
     max-width: 300px;
     padding: 0 20px;
     position: absolute;
-    top:130px;
-    transition: transform 1s; 
+    top: 130px;
+    transition: transform 1s;
 
 }
-form input{
+
+form input {
     width: 100%;
     height: 30px;
     margin: 10px 0;
@@ -160,32 +232,37 @@ form input{
     border: 1px solid #ccc;
 }
 
-form .btn{
-     width: 100%;
-     border: none;
-     cursor:pointer;
-     margin:10px 0;
+form .btn {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
 }
-form .btn :focus{
+
+form .btn :focus {
     outline: none;
 
 }
-#LoginForm{
+
+#LoginForm {
     left: -300px;
 
 }
-#RegForm{
-    left:0;
+
+#RegForm {
+    left: 0;
 }
+
 form a {
     font-size: 12px;
 }
-#Indicator{
+
+#Indicator {
     width: 100px;
     border: none;
     background: rgb(73, 150, 228);
     height: 3px;
-    margin-top: 8px; 
+    margin-top: 8px;
     transform: translatex(100px);
     transition: transform 1s;
 }
@@ -196,9 +273,7 @@ form a {
     max-width: 400px;
     padding: 0 20px;
     position: absolute;
-    top:130px;
-    transition: transform 1s; 
+    top: 130px;
+    transition: transform 1s;
 
 }
-
-
