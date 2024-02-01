@@ -34,6 +34,7 @@ function getProduct(): array
                         <li><a href="">À propos</li></a>
                         <li><a href="">Contact</li></a>
                         <li><a href="login.php">Connexion</li></a>
+                        <li><a href="admin.php">Admin</li></a>
                     </ul>
                     <img src="assets/bootstrap-5.3.2-dist/img/shopping-bag.png" width="30px" height="30px">
                 </nav>
@@ -62,28 +63,12 @@ function getProduct(): array
             ?>
                 <div class="col-4">
                     <img src="assets/bootstrap-5.3.2-dist/img/girophare-1.png">
-                    <h4><?= $product->pname ?></h4>
+                    <h4><?= $product['pname'] ?></h4>
                     <div class="rating">
                         <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
 
                     </div>
-                    <p><?= $product->price ?>€</p>
-                </div>
-                <div class="col-4">
-                    <img src="assets/bootstrap-5.3.2-dist/img/panneau-1.png">
-                    <h4>Panneau rare limité Quechua</h4>
-                    <div class="rating">
-                        <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-                    </div>
-                    <p><?php ?>629.99 €</p>
-                </div>
-                <div class="col-4">
-                    <img src="assets/bootstrap-5.3.2-dist/img/porte-cle-1.png">
-                    <h4>Porte clé solide Gucci edition</h4>
-                    <div class="rating">
-                        <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-                    </div>
-                    <p>9.99 €</p>
+                    <p><?= $product['price'] ?> €</p>
                 </div>
             <?php endforeach; ?>
         </div>
