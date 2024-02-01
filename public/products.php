@@ -70,7 +70,6 @@ function findProduct(): array
                     <img src="<?php $productFound['image'] ?>">
                     <h4><?= $productFound['name'] ?></h4>
                     <div class="rating">
-                        <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
 
                     </div>
                     <p><?= $productFound['price'] ?> €</p>
@@ -80,10 +79,9 @@ function findProduct(): array
         else : foreach (getProduct() as $product) :
             ?>
                 <div class="col-4">
-                    <img src="<?php $product['image'] ?>">
+                    <img src="<?= $product['image'] ?>">
                     <h4><?= $product['name'] ?></h4>
                     <div class="rating">
-                        <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
 
                     </div>
                     <p><?= $product['price'] ?> €</p>

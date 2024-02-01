@@ -52,33 +52,29 @@ include_once __DIR__ . '/../src/init.php';
 
         <div class="row">
             <div class="col-4">
-                <img src="assets/bootstrap-5.3.2-dist/img/girophare-1.png">
+                <img src="https://cdn1.prozon.com/35505-thickbox_default/gyrophare-led-bleu.jpg">
                 <h4>Girophare qualité de marque</h4>
                 <div class="rating">
-                    <p>★★★★★</p>
 
                 </div>
             </div>
             <div class="col-4">
-                <img src="assets/bootstrap-5.3.2-dist/img/girophare-1.png">
+                <img src="https://s4.aconvert.com/convert/p3r68-cdx67/a64nu-njgrk.jpg">
                 <h4>t-shirt designé par Mathieu</h4>
                 <div class="rating">
-                    <p>★★★★★</p>
 
                 </div>
             </div>
             <div class="col-4">
-                <img src="assets/bootstrap-5.3.2-dist/img/panneau-1.png">
+                <img src="https://s4.aconvert.com/convert/p3r68-cdx67/avszq-jm7o4.jpg">
                 <h4>Panneau de signalisation de marque</h4>
                 <div class="rating">
-                    <p>★★★★★</p>
                 </div>
             </div>
             <div class="col-4">
-                <img src="assets/bootstrap-5.3.2-dist/img/porte-cle-1.png">
+                <img src="https://s4.aconvert.com/convert/p3r68-cdx67/a56c8-vs542.jpg">
                 <h4>Porte clé de marque</h4>
                 <div class="rating">
-                    <p>★★★★★</p>
                 </div>
             </div>
         </div>
