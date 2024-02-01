@@ -12,14 +12,13 @@ function getProduct(): array
 
 function findProduct(): array
 {
-
     global $pdo;
     $pdostatement = $pdo->prepare('SELECT * FROM products
     WHERE name LIKE :object;');
     $pdostatement->execute([":object" => "%" . $_GET['searchProduct'] . "%"]);
     $result = $pdostatement->fetchAll();
     return $result;
-};
+}
 
 ?>
 <!DOCTYPE html>
@@ -61,30 +60,25 @@ function findProduct(): array
     </div>
 
     <div class="row">
-
         <?php
         if (isset($_GET['searchProduct'])) :
             foreach (findProduct() as $productFound) :
         ?>
                 <div class="col-4">
-                    <img src="<?php $productFound['image'] ?>">
+                    <img src="<?= $productFound['image'] ?>">
                     <h4><?= $productFound['name'] ?></h4>
-                    <div class="rating">
-
-                    </div>
                     <p><?= $productFound['price'] ?> €</p>
                 </div>
             <?php
             endforeach;
         else : foreach (getProduct() as $product) :
             ?>
-                <div class="col-4">
-                    <img src="<?= $product['image'] ?>">
-                    <h4><?= $product['name'] ?></h4>
-                    <div class="rating">
-
-                    </div>
-                    <p><?= $product['price'] ?> €</p>
+                <div class=" col-4">
+                    <a href="page_product.php?id=<?php echo $product['id']?>">
+                        <img src="<?= $product['image'] ?>">
+                        <h4><?= $product['name'] ?></h4>
+                        <p><?= $product['price'] ?> €</p>
+                    </a>
                 </div>
         <?php
             endforeach;
