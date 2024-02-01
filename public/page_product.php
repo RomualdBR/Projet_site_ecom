@@ -1,6 +1,19 @@
 <?php
+//require_once __DIR__ . '/products.php';
+require_once __DIR__ . '/../src/init.php';
 
 
+
+function getInfos(): array
+            {
+                $productId = $_GET['id'];
+                global $pdo;
+                $pdoStatement = $pdo->prepare("SELECT * FROM products WHERE id ='$productId';");
+                $pdoStatement->execute();
+                $infos = $pdoStatement->fetchAll();
+                return $infos;
+            };
+            
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +47,27 @@
                     <img src="assets/bootstrap-5.3.2-dist/img/shopping-bag.png" width="30px" height="30px">
                 </nav>
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <?php
+            foreach (getInfos() as $info) :
+        ?>
+                <div class="col-3">
+                    <img src="<?= $info['image'] ?>">
+                    <h4><?= $info['name'] ?></h4>
+                    <p><?= $info['price'] ?> €</p>
+                    <p><?= $info['quantity'] ?> en stock</p>
+                </div>
+        <?php 
+            endforeach;        
+        ?>
+    </div>
 
+    <a href="panier"><input type="button" name="add" value="Ajouter au panier" class="order"></a>
+    <a href=""><input type="button" name="order" value="Commander" class="order"></a>
+    
+    <p><?= $info['description'] ?></p>
 </body>
 
 </html>
