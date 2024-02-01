@@ -20,9 +20,14 @@ if(isset($_POST['alter_table']))
             $new_genre = $_POST['genre'];
             $new_quality = $_POST['quality'];
 
+
             $modify_row = 'UPDATE products SET name, price, description, genre, quantity WHERE id = :id';
             $stmt=$pdo->prepare($modify_row);
-            $stmt->bindParam(":id", $_GET['id']);
+            $stmt->bindParam(":name", $_GET['new_name']);
+            $stmt->bindParam(":price", $_GET['new_price']);
+            $stmt->bindParam(":description", $_GET['new_description']);
+            $stmt->bindParam(":genre", $_GET['new_genre']);
+            $stmt->bindParam(":quality", $_GET['new_quality']);
             $stmt->execute();
             header('Location: ../admin.php');
         }
