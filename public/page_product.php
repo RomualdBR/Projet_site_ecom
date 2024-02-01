@@ -1,19 +1,7 @@
 <?php
 //require_once __DIR__ . '/products.php';
 require_once __DIR__ . '/../src/init.php';
-
-
-
-function getInfos(): array
-            {
-                $productId = $_GET['id'];
-                global $pdo;
-                $pdoStatement = $pdo->prepare("SELECT * FROM products WHERE id ='$productId';");
-                $pdoStatement->execute();
-                $infos = $pdoStatement->fetchAll();
-                return $infos;
-            };
-            
+require_once __DIR__ . '/actions/recupInfoProduit.php';
 ?>
 
 <!DOCTYPE html>
@@ -51,22 +39,24 @@ function getInfos(): array
     </div>
     <div class="row">
         <?php
-            foreach (getInfos() as $info) :
+        foreach (getInfos() as $info) :
         ?>
-                <div class="col-3">
-                    <img src="<?= $info['image'] ?>">
-                    <h4><?= $info['name'] ?></h4>
-                    <p><?= $info['price'] ?> €</p>
-                    <p><?= $info['quantity'] ?> en stock</p>
-                </div>
-        <?php 
-            endforeach;        
+            <div class="col-3">
+                <img src="<?= $info['image'] ?>">
+                <h4><?= $info['name'] ?></h4>
+                <p><?= $info['price'] ?></p>
+                <p><?= $info['quantity'] ?> en stock</p>
+            </div>
+        <?php
+        endforeach;
         ?>
     </div>
 
-    <a href="panier"><input type="button" name="add" value="Ajouter au panier" class="order"></a>
-    <a href=""><input type="button" name="order" value="Commander" class="order"></a>
-    
+    <form action="ajoutPanier.php" method="get">
+        <a href="actions/ajoutPanier.php?id=<?php echo $info['id'] ?>"><input type="button" name="add" value="Ajouter au panier" class="order"></a>
+        <a href=""><input type="button" name="order" value="Commander" class="order"></a>
+    </form>
+
     <p><?= $info['description'] ?></p>
 </body>
 

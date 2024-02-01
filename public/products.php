@@ -65,16 +65,18 @@ function findProduct(): array
             foreach (findProduct() as $productFound) :
         ?>
                 <div class="col-4">
-                    <img src="<?= $productFound['image'] ?>">
-                    <h4><?= $productFound['name'] ?></h4>
-                    <p><?= $productFound['price'] ?> €</p>
+                    <a href="page_product.php?id=<?php echo $productFound['id'] ?>">
+                        <img src="<?= $productFound['image'] ?>">
+                        <h4><?= $productFound['name'] ?></h4>
+                        <p><?= $productFound['price'] ?> €</p>
+                    </a>
                 </div>
             <?php
             endforeach;
         else : foreach (getProduct() as $product) :
             ?>
                 <div class=" col-4">
-                    <a href="page_product.php?id=<?php echo $product['id']?>">
+                    <a href="page_product.php?id=<?php echo $product['id'] ?>">
                         <img src="<?= $product['image'] ?>">
                         <h4><?= $product['name'] ?></h4>
                         <p><?= $product['price'] ?> €</p>

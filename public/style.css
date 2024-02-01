@@ -206,3 +206,32 @@ form a {
 #order .value :hover{
     cursor: pointer;
 }
+
+#listePanier{
+    width: 80%;
+
+}
+
+#validerPanier{
+    width: 20%;
+}
+
+#main_panier{
+    display: flex;
+    text-align: center;
+}
+
+.bouton_commande{
+    background-color: rgb(224, 147, 65);
+    border-color: gray;
+    color: white;
+    height: 30px;
+    border-radius: 10%;
+}
+
+
+
+.img_panier{
+    width: 100%;
+    height: 60px;
+}
