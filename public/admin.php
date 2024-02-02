@@ -59,63 +59,7 @@ require_once __DIR__ . '/../src/db.php';
             <div>
                 <button type="submit" name="submit" value="press">Envoyer</button>
             </div>
-
-
-
-            <?php
-
-
-
-            if (isset($_POST['submit']) && $_POST['submit'] == 'press') {
-                if (empty($_POST['name'])) {
-                    echo 'il manque le nom';
-                    die();
-                }
-                if (empty($_POST['price'])) {
-                    echo 'il manque le nom';
-                    die();
-                }
-                if (empty($_POST['image'])) {
-                    echo 'il manque l' . ' image';
-                    die();
-                }
-                if (empty($_POST['description'])) {
-                    echo 'il manque la description';
-                    die();
-                }
-                if (empty($_POST['genre'])) {
-                    echo 'il manque le Type';
-                    die();
-                }
-                if (empty($_POST['quantity'])) {
-                    echo 'il manque le nombre';
-                    die();
-                }
-                //Toutes les informations sont remplies
-                if (isset($_POST['name']) && isset($_POST['price']) && isset($_POST['image']) && isset($_POST['description']) && isset($_POST['genre']) && isset($_POST['quantity'])) {
-                    echo 'Votre produit est enregistrer dans la BDD';
-                    $pdo;
-                    $name = $_POST['name'];
-                    $price = $_POST['price'];
-                    $image = $_POST['image'];
-                    $description = $_POST['description'];
-                    $quantity = $_POST['quantity'];
-                    $genre = $_POST['genre'];
-                    $pdoStatement = $pdo->prepare("INSERT INTO products (name ,price, image, description, quantity, genre)
-                        VALUES (:name, :price, :image, :description, :quantity, :genre)");
-                    $pdoStatement->execute([
-                        ':name' => $name,
-                        ':price' => $price,
-                        ':image' => $image,
-                        ':description' => $description,
-                        ':quantity' => $quantity,
-                        ':genre' => $genre,
-                    ]);
-                    
-                }
-            }
-
-?>
+      
         </form>
     </a>
 
@@ -136,8 +80,8 @@ require_once __DIR__ . '/../src/db.php';
             echo "<td>" . $row["description"] . "</td>";
             echo "<td>" . $row["genre"] . "</td>";
             echo "<td>" . $row["quantity"] . "</td>";
-            echo "<td><form action='actions/remove.php?id=" . $row['id'] . "' method='post'> <input type='button' name='alter_table' value='Modifier' id=" . $row["id"] . "></input> | <input type='submit' name='delete_table' value='Supprimer' id=" . $row["id"] . "></input></form></td>";
-            echo "</tr>";
+            echo "<td><form action='actions/remove.php?id=" . $row['id'] . "' method='post'><input type='submit' name='delete_table' value='Supprimer' id=" . $row["id"] . "></input></form></td>";
+            echo "<td><form action='actions/modify_table.php?id=" . $row['id'] . "' method='post'><input type='submit' name='alter_table' value='Modifier' id=" . $row["id"] . "></input></form></td>";            echo "</tr>";
         }
         echo "</table>";
     } else {
