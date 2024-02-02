@@ -2,7 +2,6 @@
 require_once __DIR__ . '/../../src/init.php';
 ob_start();
 
-
     if (isset($_POST['submit']) && $_POST['submit'] == 'press') {
         if (empty($_POST['name'])) {
             header('Location: /admin.php?error=1');
