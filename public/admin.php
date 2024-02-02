@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/actions/remove.php';
-require_once __DIR__ . '/../src/db.php';
+require_once __DIR__ . '/../src/init.php';
 ?>
 
 <!DOCTYPE html>
@@ -14,17 +14,9 @@ require_once __DIR__ . '/../src/db.php';
 
 <body>
 
-    <nav>
-        <ul>
-            <li><a href="home.php">Accueil</li></a>
-            <li><a href="products.php">Produits</li></a>
-            <li><a href="">À propos</li></a>
-            <li><a href="">Contact</li></a>
-            <li><a href="login.php">Connexion</li></a>
-            <li><a href="admin.php">Admin</li></a>
-        </ul>
-        <img src="assets/bootstrap-5.3.2-dist/img/shopping-bag.png" width="30px" height="30px">
-    </nav>
+<?php
+        require_once __DIR__ . '/actions/header.php';
+?>
 
     <a>
         <h1>
