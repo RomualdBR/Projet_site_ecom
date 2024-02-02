@@ -7,9 +7,10 @@ require_once __DIR__ . '/../src/init.php';
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
     <title>Admin</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
 </head>
 
 <body>
@@ -58,12 +59,12 @@ require_once __DIR__ . '/../src/init.php';
     <?php
 
     $table_admin = "SELECT id, name, price, image, description, genre, quantity FROM products";
-    $result_admin = $pdo->query($table_admin);
+    $admin_table = $pdo->query($table_admin);
 
-    if ($result_admin->rowCount() > 0) {
+    if ($admin_table->rowCount() > 0) {
         echo "<table border='1'>";
         echo "<tr><th>Id</th><th>Name</th><th>Price</th><th>Image</th><th>Description</th><th>genre</th><th>quantity</th></tr>";
-        while ($row = $result_admin->fetch(PDO::FETCH_ASSOC)) {
+        while ($row = $admin_table->fetch(PDO::FETCH_ASSOC)) {
             echo "<tr>";
             echo "<td>" . $row["id"] . "</td>";
             echo "<td>" . $row["name"] . "</td>";
@@ -73,11 +74,12 @@ require_once __DIR__ . '/../src/init.php';
             echo "<td>" . $row["genre"] . "</td>";
             echo "<td>" . $row["quantity"] . "</td>";
             echo "<td><form action='actions/remove.php?id=" . $row['id'] . "' method='post'><input type='submit' name='delete_table' value='Supprimer' id=" . $row["id"] . "></input></form></td>";
-            echo "<td><form action='actions/modify_table.php?id=" . $row['id'] . "' method='post'><input type='submit' name='alter_table' value='Modifier' id=" . $row["id"] . "></input></form></td>";            echo "</tr>";
+            echo "<td><form action='actions/modify_table.php?id=" . $row['id'] . "' method='post'><input type='submit' name='alter_table' value='Modifier' id=" . $row["id"] . "></input></form></td>";            
+            echo "</tr>";
         }
         echo "</table>";
     } else {
-        echo "Aucun résultat trouvé.";
+        echo "Pas de table.";
     }
 
     ?>
