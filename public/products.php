@@ -29,19 +29,23 @@ function findProduct(): array
     <title>Bazar-shop | e-commerce</title>
     <link href="style.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
-    
+
 </head>
 
 <body>
-<?php
-        require_once __DIR__ . '/actions/header.php';
-    ?><form method="get" style="width: 500px;">
-    <span class="productSearch">
-        <input type="submit" id="searchButton" style="display: none;">
-        <input type="text" name="searchProduct" placeholder="Recherche">
-    </span>
-</form>
-    
+    <?php
+    require_once __DIR__ . '/actions/header.php';
+    ?>
+    <div class="barre_recherche_div">
+        <form method="get" style="width: 500px;" class="barre_recherche">
+            <span class="productSearch">
+                <input type="submit" id="searchButton" style="display: none;">
+                <input type="text" name="searchProduct" placeholder="Recherche" class="text_recherche">
+            </span>
+        </form>
+    </div>
+
+
 
     <div class="row">
         <?php

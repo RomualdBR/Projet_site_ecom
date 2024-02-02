@@ -236,3 +236,14 @@ form a {
     width: 100%;
     height: 60px;
 }
+
+.barre_recherche_div{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.text_recherche{
+    border: 2px solid;
+    border-radius: 10vw;
+}

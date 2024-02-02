@@ -23,13 +23,11 @@ if (isset($_POST['username']) && isset($_POST['pswrd'])) {
         $_SESSION['username'] = $username;
         $_SESSION['pswrd'] = $pswrd;
         $_SESSION['id'] = $st1->fetch()['id'];
-        $_SESSION['error_message'] = 'Bonjour ' . $_SESSION['username'] . ' et bienvenue.';
-        header('Location: /login.php');
+        header('Location: /index.php');
         die();
     } else {
         $_SESSION['error_message'] = 'Votre mot de passe ou pseudo est incorrect.';
         header('Location: /login.php');
         die();
     }
-    
 }

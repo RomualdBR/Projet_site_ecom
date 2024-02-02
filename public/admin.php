@@ -7,16 +7,17 @@ require_once __DIR__ . '/../src/init.php';
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
+    <meta charset="utf-8">
+    <title>Bazar-shop | e-commerce</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
 </head>
 
 <body>
 
-<?php
-        require_once __DIR__ . '/actions/header.php';
-?>
+    <?php
+    require_once __DIR__ . '/actions/header.php';
+    ?>
 
     <a>
         <h1>
@@ -51,7 +52,7 @@ require_once __DIR__ . '/../src/init.php';
             <div>
                 <button type="submit" name="submit" value="press">Envoyer</button>
             </div>
-      
+
         </form>
     </a>
 
@@ -73,7 +74,8 @@ require_once __DIR__ . '/../src/init.php';
             echo "<td>" . $row["genre"] . "</td>";
             echo "<td>" . $row["quantity"] . "</td>";
             echo "<td><form action='actions/remove.php?id=" . $row['id'] . "' method='post'><input type='submit' name='delete_table' value='Supprimer' id=" . $row["id"] . "></input></form></td>";
-            echo "<td><form action='actions/modify_table.php?id=" . $row['id'] . "' method='post'><input type='submit' name='alter_table' value='Modifier' id=" . $row["id"] . "></input></form></td>";            echo "</tr>";
+            echo "<td><form action='actions/modify_table.php?id=" . $row['id'] . "' method='post'><input type='submit' name='alter_table' value='Modifier' id=" . $row["id"] . "></input></form></td>";
+            echo "</tr>";
         }
         echo "</table>";
     } else {
@@ -82,4 +84,5 @@ require_once __DIR__ . '/../src/init.php';
 
     ?>
 </body>
+
 </html>
