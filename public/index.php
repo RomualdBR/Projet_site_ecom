@@ -1,5 +1,6 @@
 <?php
 include_once __DIR__ . '/../src/init.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -12,23 +13,13 @@ include_once __DIR__ . '/../src/init.php';
 </head>
 
 <body>
-    <div class="header">
-        <div class="containerNavigation">
-            <div class="navbar">
-                <div class="logo">
-                    <img src="assets/bootstrap-5.3.2-dist/img/logo.png" width="100px" alt="logo">
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="home.php">Accueil</li></a>
-                        <li><a href="products.php">Produits</li></a>
-                        <li><a href="">À propos</li></a>
-                        <li><a href="admin.php">Admin</li></a>
-                        <li><a href="login.php">Connexion</li></a>
-                        <li><a href="admin.php">Admin</li></a>
-                        <a href="panier.php"><img src="assets/bootstrap-5.3.2-dist/img/shopping-bag.png" width="30px" height="30px"></a>
-                    </ul>
+    <?php
+        require_once __DIR__ . '/actions/header.php';
+    ?>
+   
 
+
+   </a>
                 </nav>
             </div>
             <div class="row">
@@ -46,7 +37,7 @@ include_once __DIR__ . '/../src/init.php';
         </div>
     </div>
 
-    <!--------- Cathégories ---------->
+    <!--------- Catégories ---------->
     <div class="small-container">
         <h2 class="title">Produits principaux </h2>
 
@@ -60,20 +51,20 @@ include_once __DIR__ . '/../src/init.php';
                 </div>
             </div>
             <div class="col-4">
-                <img src="https://s4.aconvert.com/convert/p3r68-cdx67/a64nu-njgrk.jpg">
+                <img src="https://cdn.discordapp.com/attachments/1201866736236761099/1201899814238044222/GUCCI1.png">
                 <h4>t-shirt designé par Mathieu</h4>
                 <div class="rating">
 
                 </div>
             </div>
             <div class="col-4">
-                <img src="https://s4.aconvert.com/convert/p3r68-cdx67/avszq-jm7o4.jpg">
+                <img src="https://cdn.discordapp.com/attachments/1201866736236761099/1201874670849105991/GUCCI.png">
                 <h4>Panneau de signalisation de marque</h4>
                 <div class="rating">
                 </div>
             </div>
             <div class="col-4">
-                <img src="https://s4.aconvert.com/convert/p3r68-cdx67/a56c8-vs542.jpg">
+                <img src="https://cdn.discordapp.com/attachments/1201866736236761099/1201870419242786876/Design_sans_titre76.png">
                 <h4>Porte clé de marque</h4>
                 <div class="rating">
                 </div>

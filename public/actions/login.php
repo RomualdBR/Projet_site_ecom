@@ -31,4 +31,5 @@ if (isset($_POST['username']) && isset($_POST['pswrd'])) {
         header('Location: /login.php');
         die();
     }
+    
 }
