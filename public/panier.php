@@ -54,8 +54,11 @@ function getPanier()
                     <tr>
                         <th><img src="<?= $panierInfo['image'] ?>" alt="image de <?= $panierInfo['name'] ?>" class="img_panier"></th>
                         <td><?= $panierInfo['name'] ?> </td>
-                        <td><?= $panierInfo['quantity'] ?> </td>
+                        <td>Quantité <?= $panierInfo['quantity'] ?> </td>
                         <td><?= $panierInfo['price'] ?> €</td>
+                        <td>
+                            <a href="actions/suppPanier.php?id=<?php echo $panierInfo['id'] ?>"><input type="submit" value="Supprimer"></a>
+                        </td>
                     </tr>
                 </table>
 
