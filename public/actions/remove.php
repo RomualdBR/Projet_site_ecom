@@ -1,6 +1,8 @@
 <?php
 require_once __DIR__ . '/../../src/db.php';
-// require_once __DIR__ . '/../../public/admin.php';
+
+
+
 
 
 if(isset($_POST['delete_table']))
@@ -11,6 +13,7 @@ if(isset($_POST['delete_table']))
     $stmt->execute();
     header('Location: ../admin.php');
 }
+
 
 if(isset($_POST['alter_table']))
 {
@@ -37,5 +40,6 @@ if(isset($_POST['alter_table']))
     $stmt->execute();
     $stmt=$row->fetch(PDO::FETCH_ASSOC);
 }
+
 
 ?>

@@ -203,6 +203,7 @@ form a {
     transition: transform 1s;
 }
 
+
 #order .value :hover{
     cursor: pointer;
 }

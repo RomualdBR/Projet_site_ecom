@@ -46,7 +46,7 @@ require_once __DIR__ . '/../src/db.php';
             </div>
             <div>
                 <label for="description"></label>
-                <textarea class="description_product" type="text" name="description" id="product_description" placeholder="Description"></textarea>
+                <input class="description_product" type="text" name="description" id="product_description" placeholder="Description">
             </div>
             <div>
                 <label for="genre"></label>
