@@ -96,6 +96,9 @@ p {
 }
 
 .col-4{
+    display: flex;
+    flex-direction: row;
+    width: 20%;
     flex-basis: 25%;
     padding: 10px;
     min-width: 200px;
@@ -104,6 +107,11 @@ p {
 }
 .col-4 img{
     width: 100%;
+}
+
+.left{
+    display: flex;
+    flex-direction: row;
 }
 
 .col-3{
@@ -246,4 +254,12 @@ form a {
 .text_recherche{
     border: 2px solid;
     border-radius: 10vw;
+}
+
+.submit_filter{
+    width: 100%;
+}
+
+.allProduct{
+    text-align: center;
 }

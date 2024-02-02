@@ -44,7 +44,50 @@ function findProduct(): array
             </span>
         </form>
     </div>
+    <div class="left">
+        <?php
+        global $pdo;
+        $genreFiltre = isset($_GET['products']) ? $_GET['products'] : '';
+        if (!empty($genreFiltre)) {
+            $requete = "SELECT * FROM products WHERE genre = '$genreFiltre'";
+        } else {
+            $requete = "SELECT * FROM products";
+        }
+        $result = $pdo->prepare($requete);
+        $result->execute();
+        $rows = $result->fetchAll();
+        if (!empty($rows)) {
+            foreach ($rows as $row) {
+        ?>
+                <div class="col-4">
+                    <a href="page_product.php?id=<?php echo $row['id'] ?>">
+                        <img src="<?= $row['image'] ?>">
+                        <h4><?= $row['name'] ?></h4>
+                        <p><?= $row['price'] ?> €</p>
+                    </a>
+                </div>
+        <?php
+            }
+        } else {
+            echo "Aucun produit trouvé dans cette catégorie.";
+        }
+        ?>
+        <form method="get">
+            <select name="products" id="products">
+                <option value="">Tous les produits</option>
+                <option value="porte-cle">Porte clé</option>
+                <option value="Gyrophare">Gyrophare</option>
+                <option value="Panneaux">Panneaux</option>
+                <option value="T-Shirt">T-Shirt</option>
+            </select>
+            <input type="submit" name"filter_button" value="submit" class="submit_filter">
+        </form>
 
+    </div>
+
+
+
+    <h2 class="allProduct">Tout les produits : </h2>
 
 
     <div class="row">
